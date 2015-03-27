@@ -4,6 +4,8 @@ use Backend\Classes\ReportWidgetBase;
 
 class ClearCache extends ReportWidgetBase
 {
+	protected $defaultAlias = 'romanov_clear_cache';
+	
     public function render(){
         $this->vars['size'] = $this->getSizes();
         $widget = ($this->property("nochart"))? 'widget2' : 'widget';
