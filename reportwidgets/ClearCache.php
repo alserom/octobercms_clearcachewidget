@@ -58,15 +58,15 @@ class ClearCache extends ReportWidgetBase
 
     private function getSizes(){
 
-        $ccache = $this->get_dir_size(storage_path().'/cms/cache');
-        $s['ccache'] = $this->format_size($ccache);
-        $ccombiner = $this->get_dir_size(storage_path().'/cms/combiner');
-        $s['ccombiner'] = $this->format_size($ccombiner);
-        $ctwig = $this->get_dir_size(storage_path().'/cms/twig');
-        $s['ctwig'] = $this->format_size($ctwig);
-        $fcache = $this->get_dir_size(storage_path().'/framework/cache');
-        $s['fcache'] = $this->format_size($fcache);
-        $s['all'] = $this->format_size($ccache + $ccombiner + $ctwig + $fcache);
+        $s['ccache_b'] = $this->get_dir_size(storage_path().'/cms/cache');
+        $s['ccache'] = $this->format_size($s['ccache_b']);
+        $s['ccombiner_b'] = $this->get_dir_size(storage_path().'/cms/combiner');
+        $s['ccombiner'] = $this->format_size($s['ccombiner_b']);
+        $s['ctwig_b'] = $this->get_dir_size(storage_path().'/cms/twig');
+        $s['ctwig'] = $this->format_size($s['ctwig_b']);
+        $s['fcache_b'] = $this->get_dir_size(storage_path().'/framework/cache');
+        $s['fcache'] = $this->format_size($s['fcache_b']);
+        $s['all'] = $this->format_size($s['ccache_b'] + $s['ccombiner_b'] + $s['ctwig_b'] + $s['fcache_b']);
         return $s;
     }
 
