@@ -7,5 +7,6 @@ return [
         'clear' => 'Clear',
         'success' => 'File cache cleared!',
         'nochart' => 'Show without chart',
+        'radius' => 'Chart size',
     ],
 ];

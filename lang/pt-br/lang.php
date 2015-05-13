@@ -7,5 +7,6 @@ return [
         'clear' => 'Limpar Cache',
         'success' => 'O cache foi limpado!',
         'nochart' => 'Não mostrar gráfico',
+        'radius' => 'tamanho Gráfico',
     ],
 ];
