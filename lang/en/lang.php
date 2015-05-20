@@ -8,5 +8,6 @@ return [
         'success' => 'File cache cleared!',
         'nochart' => 'Show without chart',
         'radius' => 'Chart size',
+        'delthumbs' => 'Delete thumbs images?',
     ],
 ];

@@ -4,3 +4,4 @@
 1.0.4: Fix chart
 1.0.5: Add chart size property
 1.0.6: Add cs_CZ locale
+1.1.0: Added functionality to delete thumbs images. (set up in widget settings)

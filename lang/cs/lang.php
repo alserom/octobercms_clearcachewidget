@@ -8,5 +8,6 @@ return [
         'success' => 'Cache byla úspěšně vymazána!',
         'nochart' => 'Zobrazit bez grafu',
 		'radius' => 'Velikost Graf',
+        'delthumbs' => 'Smazat palce obrazy?',
     ],
 ]; 
