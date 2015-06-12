@@ -9,5 +9,6 @@ return [
         'nochart' => 'Zobrazit bez grafu',
 		'radius' => 'Velikost Graf',
         'delthumbs' => 'Smazat palce obrazy?',
+		'delthumbspath' => 'Cesta ke složce s obrazy',
     ],
 ]; 

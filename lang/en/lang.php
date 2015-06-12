@@ -9,5 +9,6 @@ return [
         'nochart' => 'Show without chart',
         'radius' => 'Chart size',
         'delthumbs' => 'Delete thumbs images?',
+		'delthumbspath' => 'Path to the folder with thumbs',
     ],
 ];

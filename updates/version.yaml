@@ -5,3 +5,4 @@
 1.0.5: Add chart size property
 1.0.6: Add cs_CZ locale
 1.1.0: Added functionality to delete thumbs images. (set up in widget settings)
+1.1.1: Ability to specify the path to the folder preview. (set up in widget settings)

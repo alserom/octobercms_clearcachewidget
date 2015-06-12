@@ -9,5 +9,6 @@ return [
         'nochart' => 'Não mostrar gráfico',
         'radius' => 'Tamanho Gráfico',
         'delthumbs' => 'Excluir polegares imagens?',
+		'delthumbspath' => 'O caminho para a pasta com o preview',
     ],
 ];

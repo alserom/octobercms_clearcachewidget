@@ -39,6 +39,11 @@ class ClearCache extends ReportWidgetBase
                 'type'              => 'checkbox',
                 'default'           => false,
             ],
+			'thumbspath' => [
+                'title'             => 'romanov.clearcachewidget::lang.plugin.delthumbspath',
+                'type'              => 'string',
+                'placeholder'       => "/app/uploads/public",
+            ],
         ];
     }
 
@@ -86,7 +91,9 @@ class ClearCache extends ReportWidgetBase
 
     private function delThumbs(){
         $thumbs = array();
-        $iterator = new \RecursiveDirectoryIterator(storage_path()."/app/uploads/public");
+        $path = storage_path();
+        $path .= (empty($this->property('thumbspath'))) ? "/app/uploads/public" : $this->property('thumbspath');
+        $iterator = new \RecursiveDirectoryIterator($path);
         foreach (new \RecursiveIteratorIterator($iterator) as $file) {
             if(preg_match("/^thumb_\w+_crop.*/", $file->getFilename())){
                 $thumbs[] = $file->getRealPath();
