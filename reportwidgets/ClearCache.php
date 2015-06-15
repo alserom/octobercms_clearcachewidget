@@ -92,7 +92,8 @@ class ClearCache extends ReportWidgetBase
     private function delThumbs(){
         $thumbs = array();
         $path = storage_path();
-        $path .= (empty($this->property('thumbspath'))) ? "/app/uploads/public" : $this->property('thumbspath');
+		$tp = $this->property('thumbspath');
+        $path .= empty($tp) ? "/app/uploads/public" : $tp;
         $iterator = new \RecursiveDirectoryIterator($path);
         foreach (new \RecursiveIteratorIterator($iterator) as $file) {
             if(preg_match("/^thumb_\w+_crop.*/", $file->getFilename())){
