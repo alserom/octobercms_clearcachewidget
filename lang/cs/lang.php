@@ -7,8 +7,8 @@ return [
         'clear' => 'Vymazat',
         'success' => 'Cache byla úspěšně vymazána!',
         'nochart' => 'Zobrazit bez grafu',
-		'radius' => 'Velikost grafu',
+        'radius' => 'Velikost grafu',
         'delthumbs' => 'Smazat i náhledové obrázky?',
-		'delthumbspath' => 'Cesta ke složce s náhledy',
+        'delthumbspath' => 'Cesta ke složce s náhledy',
     ],
 ]; 
