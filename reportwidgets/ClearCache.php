@@ -58,7 +58,9 @@ class ClearCache extends ReportWidgetBase
     }
 
     private function get_dir_size($directory) {
-        if(count(scandir($directory)) == 2)    return 0;
+        if(!file_exists($directory) || count(scandir($directory)) <= 2) {
+            return 0;
+        }
         $size = 0;
         foreach (new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($directory)) as $file) {
             $size += $file->getSize();
