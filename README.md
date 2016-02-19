@@ -21,6 +21,8 @@ You can display a widget with a chart or like a single button. Display options s
 - en
 - pt-br (by [Leonardo Shinagawa](https://github.com/shina))
 - cs (by [Vojta Svoboda](https://github.com/vojtasvoboda))
+- fr (by [Jean Marc BRUNO](https://github.com/jimibi))
+- it (by [Jean Marc BRUNO](https://github.com/jimibi))
 
 # Documentation
 
