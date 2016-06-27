@@ -1,7 +1,6 @@
 <?php namespace Romanov\ClearCacheWidget;
 
 use System\Classes\PluginBase;
-use Lang;
 
 class Plugin extends PluginBase
 {
