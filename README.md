@@ -44,5 +44,5 @@ Radius value of chart. Optimal value is 200, but it's only my opinion :)
 If this option is enabled, thumbs of uploaded images also will be cleared.
 - **Path to the folder with thumbs**  
 Path to the folder in which stored thumbs cache. The path must be specified relative to the folder `storage`. Default value is `/app/uploads/public`.
-- **Regex for thumb file names**
+- **Regex for thumb file names**  
 Files with a name that matches the pattern will be deleted. For more details see [preg_match](http://php.net/manual/function.preg-match.php) function. Default value is `/^thumb_\w+_crop.*/`.
