@@ -23,6 +23,7 @@ You can display a widget with a chart or like a single button. Display options s
 - cs (by [Vojta Svoboda](https://github.com/vojtasvoboda))
 - fr (by [Jean Marc BRUNO](https://github.com/jimibi))
 - it (by [Jean Marc BRUNO](https://github.com/jimibi))
+- hu (by [Szabó Gergő](https://github.com/gergo85))
 
 # Documentation
 

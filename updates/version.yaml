@@ -11,3 +11,4 @@
 1.1.4: Fix ErrorException
 1.1.5: Add french and italian locales
 1.2.0: Add property 'Regex for thumb file names'
+1.2.1: Add the Hungarian translation
