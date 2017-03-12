@@ -19,7 +19,7 @@ class Plugin extends PluginBase
     {
         return [
             'Romanov\ClearCacheWidget\ReportWidgets\ClearCache' => [
-                'label'   => 'romanov.clearcachewidget::lang.plugin.name',
+                'label'   => 'romanov.clearcachewidget::lang.plugin.label',
                 'context' => 'dashboard'
             ]
         ];

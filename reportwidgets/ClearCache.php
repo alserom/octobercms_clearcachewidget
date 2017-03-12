@@ -28,7 +28,7 @@ class ClearCache extends ReportWidgetBase
         return [
             'title' => [
                 'title'             => 'backend::lang.dashboard.widget_title_label',
-                'default'           => 'romanov.clearcachewidget::lang.plugin.name',
+                'default'           => 'romanov.clearcachewidget::lang.plugin.label',
                 'type'              => 'string',
                 'validationPattern' => '^.+$',
                 'validationMessage' => 'backend::lang.dashboard.widget_title_error'
