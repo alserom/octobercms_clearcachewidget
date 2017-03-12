@@ -3,7 +3,7 @@ return [
     'plugin' => [
         'name'          => 'Mazání Cache',
         'description'   => 'Widget pro dashboard',
-        'cache'         => 'Souborová cache',
+        'label'         => 'Souborová cache',
         'clear'         => 'Vymazat',
         'success'       => 'Cache byla úspěšně vymazána!',
         'nochart'       => 'Zobrazit bez grafu',

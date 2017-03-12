@@ -3,7 +3,7 @@ return [
     'plugin' => [
         'name'          => 'Gyorsindítótár törlése',
         'description'   => 'Widget kiegészítő a vezérlőpulthoz.',
-        'cache'         => 'Gyorsindítótár',
+        'label'         => 'Gyorsindítótár',
         'clear'         => 'Fájlok törlése',
         'success'       => 'A gyorsindítótár törölve lett!',
         'nochart'       => 'Ne legyen grafikon',

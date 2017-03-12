@@ -3,7 +3,7 @@ return [
     'plugin' => [
         'name'          => 'Vider le Cache',
         'description'   => 'Widget du tableau de bord',
-        'cache'         => 'Cache des fichiers',
+        'label'         => 'Cache des fichiers',
         'clear'         => 'Vider le Cache',
         'success'       => 'Le Cache a été vidé!',
         'nochart'       => 'Ne pas afficher le graphique',

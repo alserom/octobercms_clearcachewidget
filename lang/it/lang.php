@@ -3,7 +3,7 @@ return [
     'plugin' => [
         'name'          => 'Cancellare la Cache',
         'description'   => 'Widget di Dashboard',
-        'cache'         => 'File di cache',
+        'label'         => 'File di cache',
         'clear'         => 'Cancellare la cache',
         'success'       => 'La Cache è stato svuotato!',
         'nochart'       => 'Nascondi grafica',
