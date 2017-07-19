@@ -25,6 +25,7 @@ You can display a widget with a chart or like a single button. Display options s
 - it (by [Jean Marc BRUNO](https://github.com/jimibi))
 - hu (by [Szabó Gergő](https://github.com/gergo85))
 - tr (by [Sevdin Filiz](https://github.com/angelside))
+- nl (by [Alwin Drenth](https://github.com/adrenth))
 
 # Documentation
 
