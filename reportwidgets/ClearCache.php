@@ -11,8 +11,8 @@ class ClearCache extends ReportWidgetBase
     const CMS_COMBINER_PATH = '/cms/combiner';
     const CMS_TWIG_PATH = '/cms/twig';
     const FRAMEWORK_CACHE_PATH = '/framework/cache';
-    const THUMBNAILS_PATH = '/app/uploads/public';
-    const THUMBNAILS_REGEX = '/^thumb_\w+_crop.*/';
+    // const THUMBNAILS_PATH = '/app/uploads/public';
+    // const THUMBNAILS_REGEX = '/^thumb_\w+_crop.*/';
 
     protected $defaultAlias = 'romanov_clear_cache';
 	
@@ -49,23 +49,24 @@ class ClearCache extends ReportWidgetBase
                 'type'              => 'checkbox',
                 'default'           => false,
             ],
-			'thumbspath' => [
-                'title'             => 'romanov.clearcachewidget::lang.plugin.delthumbspath',
-                'type'              => 'string',
-                'placeholder'       => self::THUMBNAILS_PATH,
-            ],
-            'thumb_regex' => [
-                'title'             => 'romanov.clearcachewidget::lang.plugin.thumbs_regex',
-                'type'              => 'string',
-                'placeholder'       => self::THUMBNAILS_REGEX,
-            ]
+            // 'thumbspath' => [
+            //     'title'             => 'romanov.clearcachewidget::lang.plugin.delthumbspath',
+            //     'type'              => 'string',
+            //     'placeholder'       => self::THUMBNAILS_PATH,
+            // ],
+            // 'thumb_regex' => [
+            //     'title'             => 'romanov.clearcachewidget::lang.plugin.thumbs_regex',
+            //     'type'              => 'string',
+            //     'placeholder'       => self::THUMBNAILS_REGEX,
+            // ]
         ];
     }
 
     public function onClear(){
         Artisan::call('cache:clear');
         if ($this->property("delthumbs")) {
-            $this->delThumbs();
+            // $this->delThumbs();
+            Artisan::call('october:util', ['name' => 'purge thumbs', '--force' => true]);
         }
         Flash::success(Lang::get('romanov.clearcachewidget::lang.plugin.success'));
         $widget = ($this->property("nochart"))? 'widget2' : 'widget';
@@ -114,20 +115,20 @@ class ClearCache extends ReportWidgetBase
         return $s;
     }
 
-    private function delThumbs(){
-        $thumbs = array();
-        $path = storage_path();
-        $path .= $this->property('thumbspath') ?: self::THUMBNAILS_PATH;
-        $iterator = new \RecursiveDirectoryIterator($path);
-        $regex = $this->property('thumb_regex') ?: self::THUMBNAILS_REGEX;
-        foreach (new \RecursiveIteratorIterator($iterator) as $file) {
-            if (preg_match($regex, $file->getFilename())) {
-                $thumbs[] = $file->getRealPath();
-            }
-        }
-        foreach ($thumbs as $img) {
-            unlink($img);
-        }
-    }
+    // private function delThumbs(){
+    //     $thumbs = array();
+    //     $path = storage_path();
+    //     $path .= $this->property('thumbspath') ?: self::THUMBNAILS_PATH;
+    //     $iterator = new \RecursiveDirectoryIterator($path);
+    //     $regex = $this->property('thumb_regex') ?: self::THUMBNAILS_REGEX;
+    //     foreach (new \RecursiveIteratorIterator($iterator) as $file) {
+    //         if (preg_match($regex, $file->getFilename())) {
+    //             $thumbs[] = $file->getRealPath();
+    //         }
+    //     }
+    //     foreach ($thumbs as $img) {
+    //         unlink($img);
+    //     }
+    // }
 
 }
