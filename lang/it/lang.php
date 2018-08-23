@@ -1,15 +1,15 @@
 <?php
 return [
     'plugin' => [
-        'name'          => 'Cancellare la Cache',
-        'description'   => 'Widget di Dashboard',
-        'label'         => 'File di cache',
-        'clear'         => 'Cancellare la cache',
-        'success'       => 'La Cache è stato svuotato!',
-        'nochart'       => 'Nascondi grafica',
-        'radius'        => 'Tabella di grafica',
-        'delthumbs'     => 'Cancella l\'anteprima?',
-        'delthumbspath' => 'Via di accesso l\'anteprima archivio',
-        'thumbs_regex'  => 'L\'espressione regolare per i nomi di file di anteprima',
+        'name'          => 'Svuota cache',
+        'description'   => 'Widget per la  dashboard',
+        'label'         => 'Stato della cache',
+        'clear'         => 'Svuota la cache',
+        'success'       => 'La cache è stata svuotata!',
+        'nochart'       => 'Nascondi grafico',
+        'radius'        => 'Dimensione del grafico',
+        'delthumbs'     => 'Cancellare le miniature?',
+        'delthumbspath' => 'Percorso delle delle miniature',
+        'thumbs_regex'  => 'Espressione regolare dei nomi dei file delle miniature',
     ],
 ];
