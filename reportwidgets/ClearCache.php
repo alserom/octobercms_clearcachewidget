@@ -12,10 +12,10 @@ class ClearCache extends ReportWidgetBase
     const CMS_TWIG_PATH = '/cms/twig';
     const FRAMEWORK_CACHE_PATH = '/framework/cache';
     const THUMBNAILS_PATH = '/app/uploads/public';
-    const THUMBNAILS_REGEX = '/^thumb_\w+_crop.*/';
+    const THUMBNAILS_REGEX = '/^thumb_.*/';
 
     protected $defaultAlias = 'romanov_clear_cache';
-	
+
     public function render(){
         $this->vars['size'] = $this->getSizes();
         $this->vars['radius'] = $this->property("radius");
