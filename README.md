@@ -26,6 +26,7 @@ You can display a widget with a chart or like a single button. Display options s
 - hu (by [Szabó Gergő](https://github.com/gergo85))
 - tr (by [Sevdin Filiz](https://github.com/angelside))
 - nl (by [Alwin Drenth](https://github.com/adrenth))
+- sk (by [Marek Závacký](https://github.com/emzet))
 
 # Documentation
 
@@ -47,4 +48,4 @@ If this option is enabled, thumbs of uploaded images also will be cleared.
 - **Path to the folder with thumbs**  
 Path to the folder in which stored thumbs cache. The path must be specified relative to the folder `storage`. Default value is `/app/uploads/public`.
 - **Regex for thumb file names**  
-Files with a name that matches the pattern will be deleted. For more details see [preg_match](http://php.net/manual/function.preg-match.php) function. Default value is `/^thumb_\w+_crop.*/`.
+Files with a name that matches the pattern will be deleted. For more details see [preg_match](http://php.net/manual/function.preg-match.php) function. Default value is `/^thumb_.*/`.
