@@ -27,6 +27,7 @@ You can display a widget with a chart or like a single button. Display options s
 - tr (by [Sevdin Filiz](https://github.com/angelside))
 - nl (by [Alwin Drenth](https://github.com/adrenth))
 - sk (by [Marek Závacký](https://github.com/emzet))
+- sk (by [Robert Pakszys](https://github.com/gorobert))
 
 # Documentation
 
