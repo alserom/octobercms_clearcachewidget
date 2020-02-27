@@ -18,3 +18,4 @@
 1.2.5: IT locale updated
 1.2.6: Add sk locale
 1.3.0: Changing default regex for clearing thumbnails according to the comment https://github.com/romanov-acc/octobercms_clearcachewidget/pull/16#issuecomment-404909441
+1.3.1: Add Polish translation
