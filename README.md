@@ -28,6 +28,7 @@ You can display a widget with a chart or like a single button. Display options s
 - nl (by [Alwin Drenth](https://github.com/adrenth))
 - sk (by [Marek Závacký](https://github.com/emzet))
 - pl (by [Robert Pakszys](https://github.com/gorobert))
+- sl (by [Tomaž Žitnik](https://github.com/tomazzitnik))
 
 # Documentation
 
