@@ -2,6 +2,7 @@
 
 use Backend\Classes\ReportWidgetBase;
 use Artisan;
+use File;
 use Flash;
 use Lang;
 
@@ -67,6 +68,7 @@ class ClearCache extends ReportWidgetBase
         if ($this->property("delthumbs")) {
             $this->delThumbs();
         }
+        $this->delTemp();
         Flash::success(Lang::get('romanov.clearcachewidget::lang.plugin.success'));
         $widget = ($this->property("nochart"))? 'widget2' : 'widget';
         return [
@@ -101,7 +103,6 @@ class ClearCache extends ReportWidgetBase
     }
 
     private function getSizes(){
-
         $s['ccache_b']    = $this->getDirSize(storage_path() . self::CMS_CACHE_PATH);
         $s['ccache']      = $this->formatSize($s['ccache_b']);
         $s['ccombiner_b'] = $this->getDirSize(storage_path() . self::CMS_COMBINER_PATH);
@@ -110,7 +111,9 @@ class ClearCache extends ReportWidgetBase
         $s['ctwig']       = $this->formatSize($s['ctwig_b']);
         $s['fcache_b']    = $this->getDirSize(storage_path() . self::FRAMEWORK_CACHE_PATH);
         $s['fcache']      = $this->formatSize($s['fcache_b']);
-        $s['all']         = $this->formatSize($s['ccache_b'] + $s['ccombiner_b'] + $s['ctwig_b'] + $s['fcache_b']);
+        $s['tempu_b']    = $this->getDirSize(temp_path('uploads'));
+        $s['tempu']      = $this->formatSize($s['tempu_b']);
+        $s['all']         = $this->formatSize($s['ccache_b'] + $s['ccombiner_b'] + $s['ctwig_b'] + $s['fcache_b'] + $s['tempu_b']);
         return $s;
     }
 
@@ -130,4 +133,20 @@ class ClearCache extends ReportWidgetBase
         }
     }
 
+    private function delTemp(){
+        if ($tempUploads = temp_path('uploads')) {
+            if (File::exists(temp_path('uploads'))) {
+                $allFiles = File::allFiles($tempUploads);
+                foreach ($allFiles as $file) {
+                    File::delete($file);
+                }
+                $allFolders = array_reverse(File::directories($tempUploads));
+                foreach ($allFolders as $directory) {
+                    if (!File::allFiles($directory)) {
+                        File::deleteDirectory($directory);
+                    }
+                }
+            }
+        }
+    }
 }
