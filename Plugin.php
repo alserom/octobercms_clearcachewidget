@@ -24,4 +24,15 @@ class Plugin extends PluginBase
             ]
         ];
     }
+
+    public function registerPermissions()
+    {
+        return [
+            'romanov.clearcachewidget.access' => [
+                'label' => 'Manage the ClearCache Widget',
+                'tab' => 'ClearCache Widget',
+                'order' => 200,
+            ],
+        ];
+    }
 }
