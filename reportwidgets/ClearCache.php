@@ -4,6 +4,7 @@ use Backend\Classes\ReportWidgetBase;
 use Artisan;
 use Flash;
 use Lang;
+use BackendAuth;
 
 class ClearCache extends ReportWidgetBase
 {
@@ -16,11 +17,16 @@ class ClearCache extends ReportWidgetBase
 
     protected $defaultAlias = 'romanov_clear_cache';
 
-    public function render(){
-        $this->vars['size'] = $this->getSizes();
-        $this->vars['radius'] = $this->property("radius");
-        $widget = ($this->property("nochart"))? 'widget2' : 'widget';
-        return $this->makePartial($widget);
+    public function render()
+    {
+        if(BackendAuth::userHasAccess('romanov.clearcachewidget.access')){
+
+            $this->vars['size'] = $this->getSizes();
+            $this->vars['radius'] = $this->property("radius");
+            $widget = ($this->property("nochart"))? 'widget2' : 'widget';
+            return $this->makePartial($widget);
+        }
+        return '';
     }
 
     public function defineProperties()
